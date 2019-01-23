@@ -1,0 +1,34 @@
+2019-01-14 15:08:53,913 MyCategory [WARN] this is a warn message!
+2019-01-14 15:08:53,913 MyCategory [ERROR] this is an error message!
+2019-01-14 15:08:53,913 MyCategory [INFO] this is an info message!
+2019-01-14 15:08:53,913 MyCategory [DEBUG] this is a debug message!
+2019-01-14 15:10:23,489 MyCategory [WARN] this is a warn message!
+2019-01-14 15:10:23,490 MyCategory [ERROR] this is an error message!
+2019-01-14 15:10:23,490 MyCategory [INFO] this is an info message!
+2019-01-14 15:10:23,490 MyCategory [DEBUG] this is a debug message!
+2019-01-14 15:11:22,306 MyCategory [WARN] this is a warn message!
+2019-01-14 15:11:22,306 MyCategory [ERROR] this is an error message!
+2019-01-14 15:11:22,306 MyCategory [INFO] this is an info message!
+2019-01-14 15:11:22,306 MyCategory [DEBUG] this is a debug message!
+2019-01-14 15:11:40,897 MyCategory [WARN] this is a warn message!
+2019-01-14 15:11:40,897 MyCategory [ERROR] this is an error message!
+2019-01-14 15:11:40,897 MyCategory [INFO] this is an info message!
+2019-01-14 15:11:40,897 MyCategory [DEBUG] this is a debug message!
+2019-01-14 15:34:18,294 MyCategory [ERROR] [TestMylogger.cc:prefix:20]this is an error message!
+2019-01-14 15:34:18,295 MyCategory [WARN] this is a warn message!
+2019-01-14 15:34:18,295 MyCategory [INFO] this is an info message!
+2019-01-14 15:34:18,295 MyCategory [DEBUG] this is a debug message!
+2019-01-14 15:40:12,944 MyCategory [ERROR] [TestMylogger.cc:test0:24] this is an error message!
+2019-01-14 15:40:12,944 MyCategory [WARN] this is a warn message!
+2019-01-14 15:40:12,944 MyCategory [INFO] this is an info message!
+2019-01-14 15:40:12,944 MyCategory [DEBUG] this is a debug message!
+2019-01-14 16:03:45,341 MyCategory [ERROR] [TestMylogger.cc:test2:38] this is a error message!
+2019-01-14 16:03:45,341 MyCategory [WARN] [TestMylogger.cc:test2:39] this is a error message!
+2019-01-14 16:03:45,341 MyCategory [INFO] [TestMylogger.cc:test2:40] this is a error message!
+2019-01-14 16:03:45,341 MyCategory [DEBUG] [TestMylogger.cc:test2:41] this is a error message!
+2019-01-15 21:40:15,860 MyCategory [WARN] [TestMylogger.cc:test2:39] this is a error message!
+2019-01-15 21:40:15,861 MyCategory [INFO] [TestMylogger.cc:test2:40] this is a error message!
+2019-01-15 21:40:15,861 MyCategory [DEBUG] [TestMylogger.cc:test2:41] this is a error message!
+2019-01-15 22:52:47,863 MyCategory [WARN] [TestMylogger.cc:test2:39] this is a error message!
+2019-01-15 22:52:47,863 MyCategory [INFO] [TestMylogger.cc:test2:40] this is a error message!
+2019-01-15 22:52:47,863 MyCategory [DEBUG] [TestMylogger.cc:test2:41] this is a error message!

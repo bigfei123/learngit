@@ -32,10 +32,20 @@ class Dictionary
 {
 public:
 
+	Dictionary(size_t capacity)
+	{
+		vec.reserve(capacity);
+	}
 	void read(const string & filename);
 	void store(const string & filename);
+	string preprocess(const string & word);
+	void insert(const string & word);
+	void addNew(const string & word);
 
 private:
 	vector<Record> vec;	
+
+	vector<Record>::iterator it;
 };
+
 #endif

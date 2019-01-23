@@ -30,6 +30,7 @@ void test1()
 	Category & root = Category::getRoot();
 	root.setAppender(ostreamAppender);
 	root.setPriority(Priority::DEBUG);
+	root.setPriority(Priority::ERROR);
 
 	//执行记录日志的操作
 	root.emerg("this is an emerg message");
@@ -125,8 +126,8 @@ void test3()
 }
 int main(void)
 {
-	//test1();
+	test1();
 	//test2();
-	test3();
+	//test3();
  
 }

@@ -36,7 +36,7 @@ public:
 				cout << endl;
 			}
 	}
-	//符合赋值运算符推荐以成员函数形式重载
+	//复合赋值运算符推荐以成员函数形式重载
 	Complex & operator+=(const Complex & rhs)
 	{
 		cout << "Complex & operator+=(const Complex &)" << endl;
@@ -54,7 +54,7 @@ public:
 		++_dimag;
 		return *this;
 	}
-	Complex operator++(int) //int参数没有实际意义，只有用来与前置++区分开
+	Complex operator++(int) //int参数没有实际意义，只有用来与前置++区分开,后置++返回的是零时变量，不能取地址
 	{
 		cout << "Complex operator++(int)" << endl;
 		Complex tmp(*this);
@@ -69,8 +69,7 @@ private:
 	double _dimag;
 
 };
-//推荐
-//以友元函数形式进行重载，最简洁的方式
+//推荐以友元函数形式进行重载，最简洁的方式
 //而且与内置类型的数据在操作形式上保持一致
 Complex operator+(const Complex & lhs, const Complex & rhs)
 {
@@ -91,6 +90,9 @@ int test0()
 	Complex c3 = c1 + c2;
 	cout << "c3 = ";
 	c3.print();
+
+	cout<< endl << "执行c1+=c2之后："<< endl;
+	c1 += c2;
 
 	cout << endl << "执行前置，后置表达式" << endl;
 	cout << "++c1 = " ;
@@ -128,8 +130,8 @@ void test1()
 
 int main(void)
 {
-	//test0();
-	test1();
+	test0();
+	//test1();
 	return 0;
 }
  
