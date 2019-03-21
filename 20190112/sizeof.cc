@@ -11,6 +11,6 @@ using std::endl;
 int main(void)
 {
 	int number = 10;
-	printf("sizeof(number) = %u\n",sizeof(number));
-	printf("sizeof(number) = %u\n",sizeof number);
+	printf("sizeof(number) = %d\n",sizeof(number));
+	printf("sizeof(number) = %d\n",sizeof number);
 }

@@ -17,6 +17,7 @@ Queue::Queue()
 {
 	cout << " Queue() " << endl;
 }
+
 Queue::~Queue()
 {
 	if(_data != NULL)

@@ -130,8 +130,8 @@ void test1()
 
 int main(void)
 {
-	test0();
-	//test1();
+	//test0();
+	test1();
 	return 0;
 }
  

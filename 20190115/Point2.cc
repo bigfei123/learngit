@@ -21,7 +21,7 @@ public:
 	
 	Point(int ix, int iy = 0)
 	: _ix(ix)
-			, _iy(iy)
+	, _iy(iy)
 	{
 		cout << "Point(int,int)" << endl;
 	}
@@ -39,7 +39,7 @@ public:
 	//explicit
 	operator int()
 	{
-		cout << "operator int()" << endl;
+		//cout << "operator int()" << endl;
 		return _ix * _iy;
 	}
 

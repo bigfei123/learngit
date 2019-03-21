@@ -27,14 +27,16 @@ void test1()
 	Computer com1("Thinkpad",6666);
 	cout << ">> com:" << endl;
 	com1.print();
+	cout << endl;
 
 	Computer com2 = com1;
 	cout <<" >> 修改com1的brand " << endl;
 	com1.setBrand("xiaomi");
 	cout <<">> com1:" << endl;
 	com1.print();
+	cout << endl;
 
-	cout << endl << ">> com2:" << endl;
+	cout << ">> com2:" << endl;
 	com2.print();
 }
 
@@ -68,12 +70,12 @@ void test3()
 {
 	cout << "sizeof(Computer) = " << sizeof(Computer) << endl;
 
-	cout << "购买电脑之前：";
-	Computer::printTotalPrice();
+	cout << "购买电脑之前：" ;
+	Computer::printTotalPrice(); 
 	cout << endl;
 
 	Computer com1("Thinkpad",6666);
-	cout << "购买第一台电脑：" ;
+	cout << "购买第一台电脑：" << endl;
 	com1.print();
 	com1.printTotalPrice();
 	Computer::printTotalPrice();   //静态成员函数可以直接通过类名调用，不需要创建对象
@@ -94,21 +96,21 @@ void test3()
 	{
 		Computer com1("Thinkpad" , 6666);
 		com1.print();  //非const对象 可以调用const成员函数
+		cout << endl;
 
 		const Computer com2("Matebook",7777);
 		com2.print();    //const 对象只能调用const成员函数，不能调用非const成员函数
+		cout << endl;
 	}
-
-
-
 
 
 int main(void)
 {
-//	test1(); 
-	test2();
-//	test3();
-//	test4();
+	//test0();
+	//test1(); 
+	//test2();
+	//test3();
+	test4();
 	return 0;
 }
 

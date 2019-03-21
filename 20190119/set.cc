@@ -44,7 +44,7 @@ void test1()
 	//cout << number[0] << endl;
 	set<int>::iterator sit = numbers.begin();
 	++sit;
-	cout << "*sit" << *sit << endl;
+	cout << "*sit = " << *sit << endl;
 
 	//查找元素， 其时间复杂度是O(lonN) ==>二分查找 ==》底层实现是红黑树
 	//count(): 在容器中查找指定元素，有返回1，没有返回0
@@ -60,7 +60,7 @@ void test1()
 	else
 		cout << "已找到， *it = " << *it << endl;
 	//添加元素
-	//std::pair<set<int>::iterator, bool> ret = numbers.insert(1);
+	//std::pair<iterator,bool> insert( const value_type& value );
 	std::pair<set<int>::iterator, bool> ret = numbers.insert(9);
 	if(ret.second) {
 		cout << "添加元素成功!" << *ret.first << endl;
@@ -123,15 +123,15 @@ std:: ostream & operator<<(std::ostream & os, const Point & rhs)
 	return os;
 }
 
-bool operator<(const Point & lhs, const Point & rhs)
-{
-	if(lhs.getDistance() < rhs.getDistance())
-		return true;
-	else if(lhs.getDistance() == rhs.getDistance()){
-		return lhs._ix > rhs._ix;
-	}else
-		return false;
-}
+//bool operator<(const Point & lhs, const Point & rhs)
+//{
+//	if(lhs.getDistance() < rhs.getDistance())
+//		return true;
+//	else if(lhs.getDistance() == rhs.getDistance()){
+//		return lhs._ix > rhs._ix;
+//	}else
+//		return false;
+//}
 
 bool operator>(const Point & lhs, const Point & rhs)
 {
@@ -142,12 +142,12 @@ bool operator>(const Point & lhs, const Point & rhs)
 	}else
 		return false;
 }
-//自定义比较器
+////自定义比较器,函数对象
 struct PointComparator
 {
 	bool operator()(const Point & lhs, const Point & rhs)
 	{
-		//cout << "bool operator()(const Point &,const Point &)" << endl;
+		cout << "bool operator()(const Point &,const Point &)" << endl;
 		if(lhs.getDistance() < rhs.getDistance())
 			return true;
 		else if(lhs.getDistance() == rhs.getDistance()) {
@@ -161,7 +161,8 @@ void test3()
 {
 	//set<类型参数、比较参数(结构体)、配置器>
 	//重载了<运算符,比较Point到原点距离，重载了<<运算符，依次输出各点
-	set<Point, std::greater<Point>> numbers{
+	//set<Point, std::greater<Point>> numbers{
+	set<Point, PointComparator> numbers{
 		Point(1, 2),
 		Point(0, 2),
 		Point(-1, -2),

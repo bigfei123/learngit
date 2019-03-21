@@ -21,13 +21,13 @@ public:
 		cout << "CharArray(size_t)" <<endl;
 	}
 
-	//下表访问运算符，有两个参数
-	//第一个操作数是对象本身、第二个操作数可以是任意类型
+	//下标访问运算符只能以成员函数形式重载，有两个参数
+	//第一个操作数是对象本身(this指针)、第二个操作数可以是任意类型
 	//
 	//string/vector 它们都能像使用数组一样去访问元素，就是因为他们重载了下标访问运算符
 	
-	//返引用而不是返对象的原因在于：返对象会进行复制
-	//这时就不是操作原数
+	//返引用而不是返对象的原因在于：返对象会进行复制这时就不是操作原数
+	
 	char & operator[](size_t idx) 
 	{
 		if(idx < size()) {
@@ -55,8 +55,6 @@ private:
 	char * _data;
 };
 
-
-
 int main(void)
 {
 	const char * str = "hello,world";
@@ -64,12 +62,12 @@ int main(void)
 
 	for(size_t idx =0; idx != ca.size(); ++idx) {
 		ca[idx] = str[idx];
-
 	}
 
 	for(size_t idx = 0; idx != ca.size(); ++idx) {
-		cout << ca[idx] << '\n';
+		cout << ca[idx] << ' ' ;
 	}
+	cout << endl;
 	return 0;
 }
 

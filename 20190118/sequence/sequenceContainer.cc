@@ -48,6 +48,10 @@ std::ostream & operator<<(std::ostream & os,const Point & rhs)
 
 void test0()
 {
+	vector<int> numbers = {1, 2 ,3 ,4 ,6};
+	vector<int>::iterator iter = numbers.begin() + 4;
+	numbers.emplace_back(5);//在尾部插入5
+	numbers.emplace(iter, 5);//在指定下标处插入5
 	vector<Point> points{
 		Point(1, 2),
 		Point(3, 4),
@@ -58,22 +62,23 @@ void test0()
 	points.emplace_back(11, 22); //直接传参,在内部构造一个Point对象
 
 	display(points);
+	display(numbers);
 }
 
 void test1()
 {
 	//vector<int> numbers(10, 1);
-	int array[10] = {1,2,3 ,4 ,5 ,6 ,7 ,8, 9,10};
+	int array[10] = {1, 2, 3 ,4 ,5 ,6 ,7 ,8, 9, 10};
 	vector<int> numbers(array, array + 10);
 	display(numbers);
-	cout << "sizeof(vector<int>) = " << sizeof(vector<int>) << endl;
+	cout << "sizeof(vector<int>) = " << sizeof(numbers) << endl;
 	//vector<int> numbers{1, 2, 3, 4, 5, 6, 7, 8, 9};
 	// &numbers; 求的是指向第一个元素指针的栈地址
-	cout << "&numbers[0]"<< &numbers[0]<< endl;	
+	cout << "&numbers[0] = "<< &numbers[0]<< endl;	
 	//第一个元素的首地址
-	cout << "&*numbers.begin()" << &*numbers.begin()<< endl ; 
+	cout << "&*numbers.begin() = " << &*numbers.begin()<< endl ; 
 	//第一个元素的首地址
-	int *pdata = numbers.data();
+	int *pdata = numbers.data();//T * data() 返回指向vector的指针
 	cout << "number[0] = " << *pdata << endl;
 	cout << "number's size = " << numbers.size() << endl
 		 << "number's capacity = " << numbers.capacity() << endl;
@@ -88,7 +93,7 @@ void test1()
 	//push_back/pop_back
 	numbers.push_back(10);
 	numbers.push_back(11);
-	//numbers.shrink_to_fit();  //回收多余的空间 不回收是18.回收之后为11
+	numbers.shrink_to_fit();  //回收多余的空间 不回收是18.回收之后为11
 	cout << "numbers's size = " << numbers.size() << endl
 		 << "numbers's capacity = " << numbers.capacity() << endl;
 
@@ -116,6 +121,7 @@ void test1()
 	cout << "number's capacity = " << numbers.capacity() << endl;
 
 	cout << "*it = " << *it << endl;
+	display(numbers);
 	vector<int> vec{41, 42, 43 ,44, 45, 46, 47, 48, 49};//导致迭代器失效的问题
 	numbers.insert(it, vec.begin(), vec.end());  //会导致numbers进行扩容操作
 	cout << "number's capacity = " << numbers.capacity() << endl;
@@ -172,7 +178,7 @@ void test2()
 	numbers.insert(it, vec.begin(), vec.end());
 	display(numbers);
 	numbers.clear();
-	numbers.shrink_to_fit();
+	//numbers.shrink_to_fit();
 	display(numbers);
 	cout << "number.size() =" << numbers.size() << endl;
 }
@@ -233,12 +239,12 @@ void test4()
 int main()
 {
 	//test0();
-	cout << ">>>vector:" << endl;
+	//cout << ">>>vector:" << endl;
 	//test1();
 	cout << ">>>deque:" << endl;
-	//test2();
-	cout << ">>>list:" << endl;
+	test2();
+	//cout << ">>>list:" << endl;
 	//test3();
-	test4();
+	//test4();
 	return 0;
 }

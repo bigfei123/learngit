@@ -10,12 +10,12 @@
 using std::cout;
 using std::endl;
 
-class Node
+struct Node
 {
 public:
 	Node();
 	~Node();
-public:
+
 	int data;
 	Node *pre;
 	Node *next;

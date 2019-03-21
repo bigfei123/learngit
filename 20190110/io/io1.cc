@@ -29,9 +29,9 @@ void test0()
 	while(cin >> number , !cin.eof()) // 如果输入的数据不是数字，流的状态goodbit位由1变为0
 	{								  // failbit位由0变为1，此时陷入死循环
 		cout << "number =" << number << endl;
-//		cin.clear();  //重置流的状态
+		cin.clear();  //重置流的状态
 		//表示从输入流 cin 中提取字符，提取的字符不是数字，不被使用
-//		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');//清空缓冲区
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');//清空缓冲区
 		printCinStatus();
 	}
 }	
@@ -42,10 +42,10 @@ void test1()
 	cout << "number = " << endl;
 	printCinStatus();
 
-	//cin.clear(); //重置流的状态
+	cin.clear(); //重置流的状态
 	cout << "重置流的状态" << endl;
 	printCinStatus();
-	//cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');//清空缓冲区
+	cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');//清空缓冲区
 	string s1;
 	cin >> s1;
 	printCinStatus();
@@ -53,8 +53,7 @@ void test1()
 }
 int main(void)
 {
-	test0();
-//	test1();
+	//test0();
+	test1();
 	return 0;
- 
 }

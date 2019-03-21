@@ -16,10 +16,11 @@ void print(Args... args) //args函数参数包
 	cout << "sizeof...(args) = " << sizeof...(args) << endl;
 }
 
-int test0()
+void test0()
 {
 	string s1 = "world";
 	print();
+	print(true);
 	print(1, 2.2);
 	print('a', true, s1);
 	print(3, 4.4, 'c', "hello");
@@ -69,8 +70,8 @@ void test2()
 
 int main()
 {
-	test0();
-//	test1();
+	//test0();
+	//test1();
 	test2();
 	return 0;
 }

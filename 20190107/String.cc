@@ -48,7 +48,7 @@ public:
 
 	void print()
 	{
-		cout << endl << " _pstr:" << _pstr << endl;
+		cout << " _pstr:" << _pstr << endl;
 	}
 private:
 	char *_pstr;
@@ -58,20 +58,23 @@ private:
 
 int main(void)
 {
-	String str1;
-//	str1.print();
+	//String str1;
+	//str1.print();
 
 	String str2="Hello world" ;
 	String str3=("wangdao ");
 
 	str2.print();
 	str3.print();
+	cout << endl;
 
 	String str4=str3;
 	str4.print();
+	cout << endl;
 
 	str4= str2;
 	str4.print();
+	cout << endl;
 
 	return 0;
  

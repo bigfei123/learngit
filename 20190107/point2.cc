@@ -49,7 +49,7 @@ int test0()
 	cout << "pt1=";
 	pt1.print();
 
-	Point pt2=pt1;   // 执行赋值构造函数
+	Point pt2 = pt1;   // 执行复制构造函数
 	cout << "pt2 = ";
 	pt2.print();
 	return 0;

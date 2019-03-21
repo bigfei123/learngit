@@ -58,8 +58,9 @@ public:
 	{
 		cout << "Complex operator++(int)" << endl;
 		Complex tmp(*this);
-		++_dreal;
-		++_dimag;
+		++*this;
+		//++_dreal;
+		//++_dimag;
 		return tmp;
 	}
 	friend Complex operator+(const Complex & lhs, const Complex & rhs);
@@ -128,30 +129,22 @@ std::istream & operator>>(std::istream & is, Complex & rhs)
 int test0()
 {
 	Complex c1(1, 2);
-	cout << "c1 = ";
-	c1.print();
+	cout << "c1 = " << c1 << endl;
 	Complex c2(3, 4);
-	cout << "c2 = ";
-	c2.print();
-
+	cout << "c2 = " << c2 << endl;
 	Complex c3 = c1 + c2;
-	cout << "c3 = ";
-	c3.print();
+	cout << "c3 = " << c3 << endl;
 
 	cout<< endl << "执行c1+=c2之后："<< endl;
 	c1 += c2;
 
 	cout << endl << "执行前置，后置表达式" << endl;
-	cout << "++c1 = " ;
-	(++c1).print();
-	cout << "c1 = " ;
-	c1.print();
+	cout << "++c1 = " << (++c1) << endl;
+	cout << "c1 = " << c1 << endl;
 	cout << endl;
 
-	cout << "c1++ = ";
-	(c1++).print();
-	cout << "c1 = ";
-	c1.print();
+	cout << "c1++ = " << (c1++) << endl;
+	cout << "c1 = " << c1 << endl;
 	cout << endl;
 	return 0;
 }
@@ -161,22 +154,12 @@ void test1()
 	Complex c1(-1, -2);
 	cout << "c1 = " << c1 << endl; //链式编程
 	(operator<<(operator<<(cout , "c1 ="),c1));
-
-	Complex c2(0, -2);
-	cout << "c2 = " << c2 << endl; //链式编程
-
-	Complex c3(0, 0);
-	cout << "c3 = " << c3 << endl; //链式编程
-
-	Complex c4(1, 2);
-	cout << "c4 = " << c4 << endl; //链式编程
+	cout << endl;
 
 	Complex c5(1, 0);
-	cout << "c5 = " << c5 << endl; //链式编程
-
 	cout << ">> pls input a complex:" << endl;
-	std::cin >>c5;
-	cout << "c5= " << c5 <<endl;
+	std::cin >> c5;
+	cout << "c5 = " << c5 <<endl;
 }
 
 int main(void)

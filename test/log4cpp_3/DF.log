@@ -1,0 +1,88 @@
+1547441413 ERROR myCat : hello,world
+1547441413 WARN myCat : hello,world
+1547441413 INFO myCat : hello,world
+1547442252 ERROR myCat : hello,world
+1547442252 WARN myCat : hello,world
+1547442252 INFO myCat : hello,world
+1547442452 ERROR myCat : hello,world
+1547442452 WARN myCat : hello,world
+1547442452 INFO myCat : hello,world
+1547442891 ERROR myCat : hello,world
+1547442891 WARN myCat : hello,world
+1547442891 INFO myCat : hello,world
+1547443027 ERROR myCat : hello,world
+1547443027 WARN myCat : hello,world
+1547443027 INFO myCat : hello,world
+1547444687 WARN myCat : hello
+1547559521 ERROR myCat : this is an error message
+1547559521 ERROR myCat : this is an error message
+1547559521 ERROR myCat : this is an error message
+1547559521 ERROR myCat : this is an error message
+1547560409 ERROR myCat : this is an error message
+1547560409 ERROR myCat : this is an error message
+1547560409 ERROR myCat : this is an error message
+1547560409 ERROR myCat : this is an error message
+1547561880 ERROR myCat : [TestMylogger.cc:20:prefix]this is an error message
+1547561880 ERROR myCat : this is an error message
+1547561880 ERROR myCat : this is an error message
+1547561880 ERROR myCat : this is an error message
+1547563773 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1547563849 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1547563916 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1547564066 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1547564150 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1547564150 WARN myCat : [TestMylogger.cc:test1:44]this is a warn message!
+1547564150 INFO myCat : [TestMylogger.cc:test1:45]this is a iofo message!
+1547564150 DEBUG myCat : [TestMylogger.cc:test1:46]this is a debug message!
+1548076663 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1548076663 WARN myCat : [TestMylogger.cc:test1:44]this is a warn message!
+1548076663 INFO myCat : [TestMylogger.cc:test1:45]this is a iofo message!
+1548076663 DEBUG myCat : [TestMylogger.cc:test1:46]this is a debug message!
+1548076971 ERROR myCat : this is an error message
+1548076971 ERROR myCat : this is an error message
+1548076971 ERROR myCat : this is an error message
+1548077138 ERROR myCat : this is an error message
+1548077138 DEBUG myCat : this is an error message
+1548077138 WARN myCat : this is an error message
+1548077302 ERROR myCat : [TestMylogger.cc:test0:28]this is an error message
+1548077302 ERROR myCat : this is an error message
+1548077302 DEBUG myCat : this is an error message
+1548077302 WARN myCat : this is an error message
+1548077570 ERROR myCat : [TestMylogger.cc:test0:28]this is an error message
+1548077570 ERROR myCat : this is an error message
+1548077570 DEBUG myCat : this is an error message
+1548077570 WARN myCat : this is an error message
+1548077674 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1548077674 WARN myCat : [TestMylogger.cc:test1:44]this is a warn message!
+1548077674 INFO myCat : [TestMylogger.cc:test1:45]this is a iofo message!
+1548077674 DEBUG myCat : [TestMylogger.cc:test1:46]this is a debug message!
+1548487778 ERROR myCat : [TestMylogger.cc:test1:43]this is a error message!
+1548487778 WARN myCat : [TestMylogger.cc:test1:44]this is a warn message!
+1548487778 INFO myCat : [TestMylogger.cc:test1:45]this is a iofo message!
+1548487778 DEBUG myCat : [TestMylogger.cc:test1:46]this is a debug message!
+1548487778 DEBUG myCat : this is a error message! number = 10, str = hello,world
+1548487778 WARN myCat : [TestMylogger.cc:test2:55]this is a warn message!
+1548487778 INFO myCat : [TestMylogger.cc:test2:56]this is a iofo message!
+1548487778 DEBUG myCat : [TestMylogger.cc:test2:57]this is a debug message!
+1548487947 DEBUG myCat : [TestMylogger.cc:test2:53]this is a error message! number = 10, str = hello,world
+1548487947 WARN myCat : [TestMylogger.cc:test2:55]this is a warn message!
+1548487947 INFO myCat : [TestMylogger.cc:test2:56]this is a iofo message!
+1548487947 DEBUG myCat : [TestMylogger.cc:test2:57]this is a debug message!
+1548488314 DEBUG myCat : [TestMylogger.cc:test2:53]this is a error message! number = 10, str = hello,world
+1548488314 ERROR myCat : [TestMylogger.cc:test2:54]this is a error message! number = 10, str = hello,world
+1548488314 WARN myCat : [TestMylogger.cc:test2:55]this is a warn message!
+1548488314 INFO myCat : [TestMylogger.cc:test2:56]this is a iofo message!
+1548488314 DEBUG myCat : [TestMylogger.cc:test2:57]this is a debug message!
+1548488597 DEBUG myCat : [TestMylogger.cc:test2:53]this is a error message! number = 10, str = hello,world
+1548488597 ERROR myCat : [TestMylogger.cc:test2:54]this is a error message! number = 10, str = hello,world
+1548488597 WARN myCat : [TestMylogger.cc:test2:55]this is a warn message!
+1548488597 INFO myCat : [TestMylogger.cc:test2:56]this is a iofo message!
+1548488597 DEBUG myCat : [TestMylogger.cc:test2:57]this is a debug message!
+1548488652 ERROR myCat : [TestMylogger.cc:test2:54]this is a error message! number = 10, str = hello,world
+1548488652 WARN myCat : [TestMylogger.cc:test2:55]this is a error message! number = 10, str = hello,world
+1548488652 INFO myCat : [TestMylogger.cc:test2:56]this is a error message! number = 10, str = hello,world
+1548488652 DEBUG myCat : [TestMylogger.cc:test2:57]this is a error message! number = 10, str = hello,world
+1551860594 ERROR myCat : [TestMylogger.cc:test2:54]this is a error message! number = 10, str = hello,world
+1551860594 WARN myCat : [TestMylogger.cc:test2:55]this is a error message! number = 10, str = hello,world
+1551860594 INFO myCat : [TestMylogger.cc:test2:56]this is a error message! number = 10, str = hello,world
+1551860594 DEBUG myCat : [TestMylogger.cc:test2:57]this is a error message! number = 10, str = hello,world

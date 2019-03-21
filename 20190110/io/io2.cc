@@ -39,8 +39,8 @@ void test0()
 	}
 	cout <<" lines.size()= " << lines.size() << endl;
 	ifs.close();
-
 }
+
 //文件输出流
 void test1()
 {
@@ -50,9 +50,9 @@ void test1()
 		cout << "ifstream open file error!" << endl;
 		return ;
 	}
-	//cout << " >> pos = " << ifs.tellg() << endl; //0
-	//ifs.seekg(0, std::ios::end);
-	//cout << " >> pos = " << ifs.tellg() << endl; //1438
+	cout << " >> pos = " << ifs.tellg() << endl; //0
+	ifs.seekg(0, std::ios::end);
+	cout << " >> pos = " << ifs.tellg() << endl; //1438
 	
 	string file("test.txt");//如果文件不存在，则创建该文件,如果文件已经存在，
 							//则直接清空文件重新写入内容
@@ -90,13 +90,13 @@ void test2()
 		return ;
 	}
 	int number =0;
-	for(size_t idx=0; idx!= 10; ++idx){
+	for(size_t idx=0; idx!= 9; ++idx){
 		std::cin>>number;
 
 		fs << number << " "; //文件输出流的功能
 	}
 	cout << ">>> 查看流fs的状态："<<endl;
-	//printStreamStatus(fs);	
+	printStreamStatus(fs);	
 	cout << endl;
 	size_t pos= fs.tellg();
 	cout << " pos = " << pos << endl;
@@ -106,16 +106,15 @@ void test2()
 	//要通过游标偏移seekg的方法使游标指向开始位置
 	//fs.seekg(0);  //绝对位置
 	fs.seekg(0, std::ios::beg);//相对位置
-	for(size_t idx= 0; idx!= 10;++idx)
+	for(size_t idx= 0; idx!= 9;++idx)
 	{
 		fs >> number ;     //文件输入流的功能
 		cout << number << " " ;
-		//printStreamStatus(fs);
 	}
 	cout<< endl;
+	printStreamStatus(fs);
 	fs.close();
-
-}
+} 
 
 //若源文件存在则继续外后写，而不清空源文件
 void test3()
@@ -137,15 +136,14 @@ void test3()
 	cout << "pos = " << ofs.tellp() << endl;
 	ofs << "this is a new line\n";
 	ofs.close();
-
 }
 
 
 int main(void)
 {
 	//test0();
-	test1();
+	//test1();
 	//test2();
-	//test3();
+	test3();
 	return 0;
 }

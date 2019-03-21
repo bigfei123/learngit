@@ -61,6 +61,7 @@ int main(void)
 
 	Student * pstu = new Student(100, "小明"); //ok
 	pstu->print();
+	delete pstu;
 	return 0;
 }
 

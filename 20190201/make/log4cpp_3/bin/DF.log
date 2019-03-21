@@ -1,0 +1,8 @@
+1549620194 ERROR myCat : [src//TestMylogger.cc:test2:54]this is a error message! number = 10, str = hello,world
+1549620194 WARN myCat : [src//TestMylogger.cc:test2:55]this is a error message! number = 10, str = hello,world
+1549620194 INFO myCat : [src//TestMylogger.cc:test2:56]this is a error message! number = 10, str = hello,world
+1549620194 DEBUG myCat : [src//TestMylogger.cc:test2:57]this is a error message! number = 10, str = hello,world
+1551427238 ERROR myCat : [src//TestMylogger.cc:test2:54]this is a error message! number = 10, str = hello,world
+1551427238 WARN myCat : [src//TestMylogger.cc:test2:55]this is a error message! number = 10, str = hello,world
+1551427238 INFO myCat : [src//TestMylogger.cc:test2:56]this is a error message! number = 10, str = hello,world
+1551427238 DEBUG myCat : [src//TestMylogger.cc:test2:57]this is a error message! number = 10, str = hello,world

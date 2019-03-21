@@ -6,10 +6,12 @@
  
 #include <iostream>
 #include <list>
+#include <vector>
 
 using std::cout;
 using std::endl;
 using std::list;
+using std::vector;
  
 
 template <class Container>
@@ -34,9 +36,11 @@ int main()
 	display(numbers1);
 	std::less<int> lt;
 	std::greater<int> gt; //函数对象，定制化操作
+	cout << "less test: " << endl;
 	numbers1.sort(lt);
 	//numbers1.sort(std::less<int>());
 	display(numbers1);
+	cout << "greater test: " << endl;
 	numbers1.sort(gt);  //降序输出
 	//numbers1.sort(std::greater<int>());  //降序输出
 	display(numbers1); 
@@ -70,8 +74,3 @@ int main()
 	display(numbers1);
 
 }
-
-
-
-
-

@@ -59,6 +59,7 @@ int main(void)
 	Point(); //匿名对象，临时对象|作用是方便调用成员函数
 	Point pt0;
 	pt0.print();
+	cout << endl;
 
 	Point pt1(1, 2);
 	Point pt2(3, 4);
@@ -67,8 +68,9 @@ int main(void)
 	cout << "--> " ;
 	pt2.print();
 	
-	Line ln;
-	cout << "的距离: " << ln.distance(pt1, pt2) << endl;
+	//Line ln;
+	//cout << "的距离: " << ln.distance(pt1, pt2) << endl;
 	//Line()临时对象调用distance()成员函数
+	cout << "的距离: " << Line().distance(pt1, pt2) << endl;
 	return 0; 
 }

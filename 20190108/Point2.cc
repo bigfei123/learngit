@@ -47,5 +47,4 @@ int main(void)
 	pt.setX(10);
 	pt.print();
 	return 0;
- 
 }

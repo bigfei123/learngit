@@ -9,6 +9,7 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+
 //Computer类的构造函数的实现：
 Computer::Computer(const char*brand,float price)
 : _brand(new char[strlen(brand)+1]())

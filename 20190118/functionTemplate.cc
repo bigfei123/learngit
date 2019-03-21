@@ -20,6 +20,13 @@ T add(T x, T y)
 	return x + y;
 }
 
+template <class T, class L>
+L add(T x, L y)
+{
+	cout << "L add(T x, L y)" << endl;
+	return x + y;
+}
+
 template <class T>
 T add(T x, T y, T z)
 {
@@ -31,11 +38,11 @@ T add(T x, T y, T z)
 //函数模板可以与普通函数进行重载
 //
 //普通函数优先于函数模板的执行
-int add(int x, int y)
-{
-	cout << "int add(int,int)" << endl;
-	return x + y;
-}
+//int add(int x, int y)
+//{
+//	cout << "int add(int,int)" << endl;
+//	return x + y;
+//}
 
 //模板特化（template specializtion）
 //特化版本的实现可以有多个
@@ -63,8 +70,8 @@ int main(void)
 		 << "add(da, db) = " << add<double>(da, db) << endl //显式实例化
 		 << "add(ca, cb) = " << add(ca, cb) << endl
 		 << "add(s1, s2) = " << add(s1, s2) << endl;
-//	cout << "add(ia, db) = " << add(ia, db) << endl; //如果只有函数模板，这种方式错误
-//	除非有template<class T ,class L>
+	cout << "add(ia, db) = " << add(ia, db) << endl; //如果只有函数模板，这种方式错误
+	//除非有template<class T ,class L>
 	cout << "add(ia, ib, ic) = " << add(ia, ib, ic) << endl;
 
 	//特例

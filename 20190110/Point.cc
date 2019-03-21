@@ -34,7 +34,7 @@ int main(void)
 	Point pt(1,2);
 	pt.print();
 
-	Point pt1 =5;    //int --> Point 产生临时对象Point(5,0)
+	Point pt1 = 5;    //int --> Point 产生临时对象Point(5,0)
 	pt1.print();
 	return 0;
 }

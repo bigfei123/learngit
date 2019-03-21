@@ -21,6 +21,7 @@ Computer::Computer(const char * brand ,float price)
 	strcpy(_brand, brand);
 	cout << "Computer(const char *, float)" << endl;
 }
+
 //深拷贝
 Computer::Computer(const Computer & rhs)
 : _brand(new char[strlen(rhs._brand)+1]())
@@ -29,19 +30,21 @@ Computer::Computer(const Computer & rhs)
 	strcpy(_brand,rhs._brand);
 	cout << "Computer(const Computer & rhs)" << endl;
 }
+
 //赋值表达式
 Computer & Computer::operator=(const Computer & rhs)
 {
+	//1.自复制
 	if(this != &rhs)
 	{
-		//1.自复制
-		delete[] _brand;  //2. 释放左操作数指针的堆空间
+		//2. 释放左操作数指针的堆空间
+		delete[] _brand;  
 
 		_brand=new char[strlen(rhs._brand)+1]();
 		strcpy(_brand,rhs._brand);
-
 		_price=rhs._price;
 	}
+	//3.返回this指针
 	return *this;
 }
 
@@ -90,7 +93,7 @@ void Computer::print()
 void Computer::print() const
 {
 	cout << "void Computer::print() const " << endl;
-	printf(" _brand :%p\n" ,_brand);
+	printf("_brand :%p\n" ,_brand);
 	cout << "brand :" << _brand << endl
 		 << "price :" << _price << endl;
 }

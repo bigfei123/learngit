@@ -176,5 +176,4 @@ int main(void)
 {
 	test0();
 	return 0;
-
 }

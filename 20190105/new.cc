@@ -27,7 +27,7 @@ int * test0(void)
 	//free([Int); //释放空间
 
 	int *pArray=(int *)malloc(sizeof(int)*10);
-	memst(pInt, 0, sizeof(int)* 10);
+	memset(pInt, 0, sizeof(int)* 10);
 
 	free(pArray);
 	return pInt;

@@ -61,8 +61,6 @@ private:
 
 };
 
-
-
 int main(void)
 {
 	//在类之外无法执行	

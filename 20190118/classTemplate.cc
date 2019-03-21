@@ -27,8 +27,8 @@ public:
 	T top();
 
 private:
-	T* _data;
 	int _top;
+	T* _data; 
 };
 
 template <class T,size_t kSize>
@@ -111,9 +111,6 @@ void test1()
 	cout << "is empty? " << st.empty() << endl;
 	return; 
 }
-
-
-
 
 int main()
 {

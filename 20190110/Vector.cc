@@ -17,14 +17,12 @@ void printVectorCapacity(const vector<int> & v1)
 		 << "v1's capacity = " << v1.capacity() << endl;
 }
 
-
-
 int main(void)
 {
 	//动态数组，可以自动扩容，但动态扩容是有开销的
 	//策略： 当size == capacity 时， 就在去开辟新的空间2*size
 	//		 再把原来的空间的元素复制到新空间，并释放原来的空间
-	//		最后在新空间的末尾添加新的元素
+	//		 最后在新空间的末尾添加新的元素
  
 	vector<int> numbers;
 //	numbers.reserve(60);   //reserve()方法为开空间。 提前开辟好空间，之后再去使用就不会在频繁地动态扩容

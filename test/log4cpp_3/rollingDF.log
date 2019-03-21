@@ -1,0 +1,16 @@
+1547441413 ERROR myCat : hello,world
+1547441413 WARN myCat : hello,world
+1547441413 INFO myCat : hello,world
+1547442252 ERROR myCat : hello,world
+1547442252 WARN myCat : hello,world
+1547442252 INFO myCat : hello,world
+1547442452 ERROR myCat : hello,world
+1547442452 WARN myCat : hello,world
+1547442452 INFO myCat : hello,world
+1547442891 ERROR myCat : hello,world
+1547442891 WARN myCat : hello,world
+1547442891 INFO myCat : hello,world
+1547443027 ERROR myCat : hello,world
+1547443027 WARN myCat : hello,world
+1547443027 INFO myCat : hello,world
+1547444687 WARN myCat : hello

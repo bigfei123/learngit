@@ -24,7 +24,6 @@ String::String(const char *pstr)
 :_pstr(new char[strlen(pstr)+1]())
 {
 	strcpy(_pstr, pstr);
-	cout << _pstr << endl;
 	cout << "String(const char *)" << endl;
 }
 
@@ -59,19 +58,24 @@ String & String::operator=(const char *pstr)
 String & String::operator+=(const String &rhs)
 {
 	cout << "String & operator +=(const String &)" << endl;
-	char *temp = new char[(size()+ rhs.size()+1)]();
-	strcpy(temp, _pstr);
-	strcat(_pstr,rhs._pstr);
+	String tmp;
+	tmp._pstr = new char[(size()+1)]();
+	strcpy(tmp._pstr, _pstr);
+	delete [] _pstr;
+	_pstr = new char[(size()+ rhs.size()+1)]();
+	strcpy(_pstr, tmp._pstr);
+	strcat(_pstr, rhs._pstr);
+	cout << _pstr << endl;
 	return *this; 
 }
+
 // +=运算符重载
 String & String::operator+=(const char *pstr)
 {
 	cout << "String & operator +=(const char *)" << endl;
-	String temp = pstr;
-	*this += temp;
+	String temp = pstr;//调用复制构造函数
+	*this += temp; //调用上式赋值运算符函数
 	return *this; 
-
 }
 
 char & String::operator [] (std::size_t index)
@@ -163,14 +167,14 @@ bool operator < (const String &lhs, const String &rhs)
 }
 std::ostream & operator << (std::ostream &os,const String &rhs)
 {
-	cout << "ostream" << endl;
+	//cout << "ostream" << endl;
 	os << rhs._pstr <<endl;
 	return os;
 }
 
 std::istream & operator >> (std::istream &is,String &rhs)
 {
-	cout << "istream " <<endl;
+	//cout << "istream " <<endl;
 	is >> rhs._pstr;
 	return is;
 }

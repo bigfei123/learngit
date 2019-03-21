@@ -20,7 +20,7 @@ public:
 		cout << "Point(int=0,int=0)" << endl;
 	}
 
-	Point(const Point &rhs)
+	Point(const Point & rhs)
 	: _ix (rhs._ix)
 	, _iy (rhs._iy)
 	{
@@ -30,7 +30,7 @@ public:
 	//如果返回值为对象，在执行return语句时，会调用构造函数
 	//增加程序的开销，所以返回值为引用
 
-	Point& operator=(const Point &rhs)
+	Point & operator=(const Point &rhs)
 	{
 		_ix= rhs._ix;
 		_iy= rhs._iy;
@@ -44,7 +44,7 @@ public:
 		cout << "(" <<this ->_ix
 			 << "," <<this ->_iy
 			 << ")" << endl;
-
+	}
 
 	~Point()
 	{
@@ -77,7 +77,6 @@ void func(Point pt)
 }
 
 
-
 void test1()
 {
 	Point point(1,2);
@@ -85,42 +84,36 @@ void test1()
 }
 
 
-
-
 int func0()
 {
 	int a=10;
-	&a;
 	return a;   // 执行return语句是有复制的
 }
 
 
 
 //第三种复制构造函数的形式
-int func1()
+Point func1()
 {
   Point point(1,2);
   point.print();
-  return point;	//Point(const Point&);
+  return point;	//Point(const Point&);调用复制构造函数给一个临时对象
 }
 
 void test2()
 {
-	func1();
+	//func1();
 	//该语句执行结束之后，所使用到的对象都会销毁 没有变成一个持久化对象
 	//&func1(); //error 临时对象 右值（不能取地址）
-	//Point pt =func1(); //Point(Point &rhs)  b编译器有优化操作
-	//Point &rhs=func1();
-	//
-	const Point &rhs =func1(); //ok
-
+	Point pt = func1(); //Point(Point &rhs)  b编译器有优化操作
+	//cout << endl;
+	////Point &rhs= func1();//error对于右值的引用要加const关键字
+	//const Point &rhs =func1(); //ok
 }
 
 
 void test3()
 {
-	int a=3, b=4;
-
 	Point pt1(1,2);
 	cout << "pt1=";
 	pt1.print();
@@ -134,8 +127,7 @@ void test3()
 
 	cout << ">>执行pt1=pt2；之后" << endl;
 
-	pt1=pt2;
-
+	//pt1=pt2;//等价于下式
 	pt1.operator=(pt2);
 	cout << "pt1= ";
 	pt1.print();
@@ -146,8 +138,8 @@ int main(void)
 {
 	cout << ">> before testx.." << endl;
 	//test0();
-	test1();
-	//test2();
+	//test1();
+	test2();
 	//test3();
 	cout << ">> after testx.." << endl;
 	return 0;

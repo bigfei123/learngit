@@ -12,11 +12,11 @@ void test0()
 	//求字符串长度
 	char str1[]= " hello "; //字符串以‘\0'结尾
 	char str2[]= " world "; //严格来说是一个字符数组  栈区
-	str2[0]='W';
+	str2[1]='W';
 	
 	int len1=sizeof(str1);
 	int len2=sizeof(str2);
-	printf("str1's len =%d,str2's len =%d\n",len1,len2);
+	printf("str1's len = %d,str2's len = %d\n",len1,len2);
 	
 	//字符串拼接
 	int len=len1+len2-1;
@@ -24,12 +24,12 @@ void test0()
 	memset(pstr1,0,len);
 	strcpy(pstr1,str1);
 	strcat(pstr1,str2);
-	printf("pstr1=%s\n",pstr1);
+	printf("pstr1 = %s\n",pstr1);
 	free(pstr1);
 	
 	//C风格的字符串
-	const char *pstr2= "hello,world"; //位于文字常量区
-	cout << "pstr2=" << pstr2 << endl;
+	const char *pstr2 = "hello,world"; //位于文字常量区
+	cout << "pstr2 = " << pstr2 << endl;
 
 	printf("pstr2's address =%p\n",pstr2);
 	printf("hello,world's address =%p\n", &"hello,world");;
@@ -83,7 +83,7 @@ void test1()
 
 int main()
 {
-	test0();
+	//test0();
 	test1();
 	return 0;
 }

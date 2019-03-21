@@ -14,17 +14,14 @@ void test()
 {
 	Stack stack;
 	stack.Push(10);
+	cout << "top = " << stack.top() << endl;
 	stack.Push(14);
+	cout << "top = " << stack.top() << endl;
 	stack.Push(16);
-	stack.top();
-	cout << "top()" << stack.top() << endl;
+	cout << "top = " << stack.top() << endl;
 	stack.Pop();
-	stack.top();
-	cout << "top()" << stack.top() << endl;
+	cout << "top = " << stack.top() << endl;
 }
-
-
-
 
 int main(void)
 {
