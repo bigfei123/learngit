@@ -35,7 +35,6 @@ void * process_connection(void * arg)
 	local_pthread_data.ip = pdata->ip;
 	local_pthread_data.port = pdata->port;
 	local_pthread_data.peerfd = pdata->peerfd;
-	cout << "subthreadid : " << pthread_self() << endl;
 
 	int peerfd = local_pthread_data.peerfd;
 

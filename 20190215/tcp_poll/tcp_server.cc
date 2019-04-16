@@ -212,7 +212,7 @@ int test0()
 	
 	size_t fd_idx = 0;
 	pfds[fd_idx].fd = listenfd;//由内核进行修改
-	pfds[fd_idx].events = POLLIN;
+	pfds[fd_idx].events = POLLIN;//POLLIN为读事件
 	//pfds[0].revents; 
 	//pfds[1].fd = peerfd;
 	//pfds[1].events = POLLIN;
@@ -220,7 +220,6 @@ int test0()
 
 	unordered_set<int> client_fds;//存储的是所有已经建立连接的fd
 	while(1){
-		
 		//poll能够监听的文件描述符数量没有限制
 		int ready = poll(&*pfds.begin(), pfds.size(), 5000);//阻塞式函数,指定时间,5s之后返回
 		if(fd_idx == pfds.size()){

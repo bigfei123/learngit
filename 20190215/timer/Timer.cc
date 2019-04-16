@@ -22,7 +22,7 @@ Timer::Timer(TimerCallback && callback, int initialTime, int periodicTime)
 : _fd(createTimerfd())
 , _initialTime(initialTime)
 , _periodicTime(periodicTime)
-, _callback(std::move(callback))
+, _callback(move(callback))
 , _isStarted(false)
 {
 
@@ -55,7 +55,7 @@ void Timer::start()
 			cout << ">> poll timeout!" << endl;
 		}else {
 			if(pfd.fd == _fd && (pfd.revents & POLLIN)){
-				//对读事件进行处理,否则会一直循环输出
+				//对读事件进行处理,否则会一直循环输出(黑盒)
 				handleRead();
 				//执行任务
 				if(_callback)
